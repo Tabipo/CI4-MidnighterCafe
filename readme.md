@@ -8,7 +8,7 @@
     <img src="public/assets/Coffee-Clipart.jpg" alt="MSCoffee" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">Morning Shot Coffee - Website Project</h3>
+  <h3 align="center">AD - Morning Shot Coffee Website Project</h3>
 </div>
 
 <!-- * Description Section -->

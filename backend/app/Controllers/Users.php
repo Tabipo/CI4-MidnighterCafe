@@ -6,7 +6,7 @@ class Users extends BaseController
 {
     public function index(): string
     {
-        return view('user/landing');
+        return view('user');
         //can ADD HERE more functions for different views or routes/endpoints
     }
 }

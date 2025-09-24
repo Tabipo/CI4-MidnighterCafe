@@ -5,15 +5,15 @@
 
 <div align="center">
   <a href="https://github.com/Tabipo/CI4-MorningShotCoffee">
-    <img src="public/assets/Coffee-Clipart.jpg" alt="MSCoffee" width="130" height="100">
+    <img src="backend/public/assets/Coffee-Clipart.png" alt="MidnighterCafe" width="100" height="120">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - Morning Shot Coffee Website Project</h3>
+  <h3 align="center">AD - Midnighter Cafe Website Project</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This is the repository for the company website project, Morning Shot Coffee.
+This is the repository for the company website project, Midnighter Cafe.
 </div>
 
 <br/>

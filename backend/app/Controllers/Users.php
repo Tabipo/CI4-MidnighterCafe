@@ -11,4 +11,8 @@ class Users extends BaseController
         return view('user/landing');
         //can ADD HERE more functions for different views or routes/endpoints
     }
+    public function loginPage(): string
+    {
+        return view('user/loginPage');
+    }
 }

@@ -8,13 +8,12 @@
     <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">AD - Midnighter Cafe</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+This repository is coffee shop website project called Midnighter Cafe.
 </div>
 
 <br/>
@@ -55,22 +54,22 @@ It helps teams quickly bootstrap backend + frontend projects, with simple sample
 
 ## Overview
 
-This template provides a **minimal CodeIgniter 4 project layout** with conventions for file organization, commit practices, and simple modules.
+This website project will include signup and login for both admin and customers, a feature to add new menu items, as well as customer order handling.
 
-It is designed to be **easy to start with** and a **reference for adding new features**.
+The website's design is to be easy to navigate and use as well as easy on the eyes.
 
-* **Purpose**: a clean starting point for CI4 apps.
-* **Audience**: developers who want a predictable structure and quick onboarding.
+* **Purpose**: A coffee shop website that has basic crud systems.
+* **Audience**: The coffee shop is aimed towards individuals who are often stay up late whether college students or night shifts.
 
 ### Key Components
 
-These are **sample modules** included (or suggested) for learning how to add features:
+These are the planned features to be found in this project:
 
 | Component                 | Purpose                                                             | Notes                                                   |
 | ------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Auth (Sample)**         | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
-| **CRUD Module**           | Example entity (`Posts` or `Tasks`) with create/read/update/delete. | Demonstrates Controller → Service → Repository pattern. |
-| **Scheduler (Sample)**    | Simple to-do list with due dates.                                   | Shows how to extend with new tables and services.       |
+| Authorization        | Basic login/logout and role check (admin/user).                     | Uses CI4 sessions + MySQL `users` table.                |
+| Order Handling CRUD           | Basic shopping cart system| Shows customer items they've added for their order |
+| Menu Item CRUD    | Allows for new menu items to be added or featured/limited-time items.                                   | Shows existing menu items and can add and remove items.       |
 
  <!-- ! Start simple. Use these modules as **learning samples**; extend or replace them based on your project’s needs. -->
 

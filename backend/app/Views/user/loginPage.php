@@ -112,14 +112,14 @@
         <div class="col-4" id="form-card">
             <h1>Login or Sign Up</h1>
             <p>Join fellow midnighters in a cup of coffee!</p>
-            <form action="#login">
+            <form action="/">
                 <p>Username:</p>
                 <input type="text" name="username" class="form-control" />
                 <p>Password:</p>
                 <input type="password" name="password" class="form-control" />
                 <input type="submit" value="Login" class="btn" />
             </form>
-            <a href="#signup">No account? Signup!<a>
+            <a href="/signup">No account? Signup!<a>
         </div>
     </div>
 </body>

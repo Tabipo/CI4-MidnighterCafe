@@ -110,16 +110,20 @@
     </header>
     <div class="row">
         <div class="col-4" id="form-card">
-            <h1>Login or Sign Up</h1>
+            <h1>Sign Up</h1>
             <p>Join fellow midnighters in a cup of coffee!</p>
             <form action="/">
                 <p>Username:</p>
                 <input type="text" name="username" class="form-control" />
+                <p>Birthday:</p>
+                <input type="text" name="bday" placeholder="yyyy-mm-dd" class="form-control" />
                 <p>Password:</p>
                 <input type="password" name="password" class="form-control" />
-                <input type="submit" value="Login" class="btn" />
+                <input type="submit" value="Sign Up" class="btn" />
             </form>
-            <a href="/signup">No account? Signup!<a>
+            <form action="/login">
+                <input type="submit" value="Cancel" class="mt-4 btn" />
+            </form>
         </div>
     </div>
 </body>

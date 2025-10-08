@@ -85,7 +85,7 @@
             <div class="align-items-center text-center row">
                 <!--Site name-->
                 <div class="col-3 fw-bold fs-5">
-                    <a href="#Home" id="navbar-link"><img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"> Midnighter Cafe</a>
+                    <a href="/" id="navbar-link"><img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"> Midnighter Cafe</a>
                 </div>
                 <!--Navigation-->
                 <div class="col-6">
@@ -194,8 +194,8 @@
                 <!--Navigation-->
                 <div class="col-6">
                     <nav class="d-flex flex-column justify-content-center gap-2">
-                        <a href="#Moodboard" id="footer" class="fw-bold fs-5">Mood Board</a>
-                        <a href="#Roadmap" id="footer" class="fw-bold fs-5">Road Map</a>
+                        <a href="/moodboard" id="footer" class="fw-bold fs-5">Mood Board</a>
+                        <a href="/roadmap" id="footer" class="fw-bold fs-5">Road Map</a>
                     </nav>
                 </div>
                 <div class="col-3 fw-bold fs-5">

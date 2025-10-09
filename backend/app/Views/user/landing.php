@@ -80,28 +80,7 @@
 </style>
 
 <body>
-    <header class="shadow py-3" style="background-color: #341c61a7;">
-        <div class="container-fluid">
-            <div class="align-items-center text-center row">
-                <!--Site name-->
-                <div class="col-3 fw-bold fs-5">
-                    <a href="/" id="navbar-link"><img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"> Midnighter Cafe</a>
-                </div>
-                <!--Navigation-->
-                <div class="col-6">
-                    <nav class="d-flex justify-content-center gap-4">
-                        <a href="#About" id="navbar-link" class="fw-semibold">About</a>
-                        <a href="#Menu" id="navbar-link" class="fw-semibold">Menu</a>
-                        <a href="#Stores" id="navbar-link" class="fw-semibold">Stores</a>
-                    </nav>
-                </div>
-                <!--Profile-->
-                <div class="col-3 fw-semibold">
-                    <a href="#Profile" id="navbar-link">User<img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"></a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?= view('components/header'); ?>
     <div class="container-fluid">
         <div class="row">
             <div class="content-banner col-md-12">
@@ -183,28 +162,7 @@
             </div>
         </div>
     </div>
-    <footer class="shadow py-3" style="background-color: #341c61a7;">
-        <div class="container-fluid">
-            <div class="align-items-center text-center row">
-
-                <!--Site Name-->
-                <div class="col-3 fw-bold fs-5">
-                    <p id="basic-info"> 2025 &copy; Midnighter Cafe — CI4 Project</p>
-                </div>
-                <!--Navigation-->
-                <div class="col-6">
-                    <nav class="d-flex flex-column justify-content-center gap-2">
-                        <a href="/moodboard" id="footer" class="fw-bold fs-5">Mood Board</a>
-                        <a href="/roadmap" id="footer" class="fw-bold fs-5">Road Map</a>
-                    </nav>
-                </div>
-                <div class="col-3 fw-bold fs-5">
-                    <p id="basic-info">Contact: 123-456-7890</p>
-                    <p id="basic-info">Email: MidnightersCafebiz@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?= view('components/footer'); ?>
 </body>
 
 </html>

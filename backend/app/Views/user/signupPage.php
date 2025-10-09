@@ -120,9 +120,7 @@
                 <p>Password:</p>
                 <input type="password" name="password" class="form-control" />
                 <input type="submit" value="Sign Up" class="btn" />
-            </form>
-            <form action="/login">
-                <input type="submit" value="Cancel" class="mt-4 btn" />
+                <input type="button" value="Cancel" onclick="location.href ='/login'" class="btn" />
             </form>
         </div>
     </div>

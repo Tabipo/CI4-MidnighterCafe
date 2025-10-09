@@ -234,7 +234,7 @@
             <div class="align-items-center text-center row">
                 <!--Site name-->
                 <div class="col-3 fw-bold fs-5">
-                    <a href="/" id="navbar-link"><img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"> Midnighter Cafe</a>
+                    <a href="/" id="navbar-link"><img src="/assets/Midnighter-Cafe-Logo.png" alt="Profile" width="35" height="35" class="mx-2 rounded-2">Midnighter Cafe</a>
                 </div>
                 <!--Navigation-->
                 <div class="col-6">
@@ -246,7 +246,7 @@
                 </div>
                 <!--Profile-->
                 <div class="col-3 fw-semibold">
-                    <a href="#profile" id="navbar-link">User<img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"></a>
+                    <a href="#profile" id="navbar-link">User<img src="/assets/Midnighter-Cafe-Profile.png" alt="Profile" width="35" height="35" class="mx-3 rounded-circle"></a>
                 </div>
             </div>
         </div>
@@ -410,8 +410,75 @@
         <div class="col-2">
             <!--FOR SPACING-->
         </div>
+        <div class="col-4">
+            <h4 style="font-family:Cambria; font-weight:bold;">Cambria - Heading Text Example</h4>
+        </div>
+        <div class="col-4">
+            <p style="font-size:20px;">Lucida Sans - Body Text Example</p>
+        </div>
+    </div>
+    <div class="mt-4 mb-2 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
+        </div>
         <div class="col-10">
-            <h4 style="font-family:Cambria;">Cambria</h4>
+            <h3>Card Examples</h3>
+        </div>
+    </div>
+    <div class="mb-5 row" id="center-banner-info">
+        <div class="col-3">
+            <div class="shadow-sm h-100 card" id="favorite-card">
+                <div class="text-center card-body">
+                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
+                    <h5 style="font-weight: 600;" class="card-title">Mocha</h5>
+                    <p class="card-text">Espresso mixed with chocolate for a sweet drink with a caffeine kick.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="shadow-sm h-100 card" id="favorite-card">
+                <div class="text-center card-body">
+                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
+                    <h5 style="font-weight: 600;" class="card-title">Spanish Latte</h5>
+                    <p class="card-text">Bold espresso with condensed milk sweetness for a balance of strong and sweet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="shadow-sm h-100 card" id="favorite-card">
+                <div class="text-center card-body">
+                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
+                    <h5 style="font-weight: 600;" class="card-title">Frappuccino</h5>
+                    <p class="card-text">Cold coffee topped with whipped cream and the flavor of your choice, when you want a icy sweet treat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4 mb-2 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
+        </div>
+        <div class="col-10">
+            <h3>Logos</h3>
+        </div>
+    </div>
+    <div class="mt-4 mb-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
+        </div>
+        <div class="col-4">
+            <div class="shadow-sm p-3 h-100 card" id="favorite-card">
+                <div class="text-center card-body">
+                    <img src="/assets/Midnighter-Cafe-Logo.png" alt="Profile" width="300" height="300" class="rounded-circle">
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="shadow-sm p-3 h-100 card" id="favorite-card">
+                <div class="text-center card-body">
+                    <img src="/assets/Midnighter-Cafe-Logo.png" alt="Profile" width="300" height="300" class="rounded-5">
+                </div>
+            </div>
         </div>
     </div>
     <footer class="shadow py-3" style="background-color: #341c61a7;">

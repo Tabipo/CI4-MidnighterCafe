@@ -229,28 +229,7 @@
 </style>
 
 <body>
-    <header class="shadow py-3" style="background-color: #341c61a7;">
-        <div class="container-fluid">
-            <div class="align-items-center text-center row">
-                <!--Site name-->
-                <div class="col-3 fw-bold fs-5">
-                    <a href="/" id="navbar-link"><img src="/assets/Midnighter-Cafe-Logo.png" alt="Profile" width="35" height="35" class="mx-2 rounded-2">Midnighter Cafe</a>
-                </div>
-                <!--Navigation-->
-                <div class="col-6">
-                    <nav class="d-flex justify-content-center gap-4">
-                        <a href="#About" id="navbar-link" class="fw-semibold">About</a>
-                        <a href="#Menu" id="navbar-link" class="fw-semibold">Menu</a>
-                        <a href="#Stores" id="navbar-link" class="fw-semibold">Stores</a>
-                    </nav>
-                </div>
-                <!--Profile-->
-                <div class="col-3 fw-semibold">
-                    <a href="#profile" id="navbar-link">User<img src="/assets/Midnighter-Cafe-Profile.png" alt="Profile" width="35" height="35" class="mx-3 rounded-circle"></a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?= view('components/header'); ?>
     <div class="mt-5 mb-2 row">
         <div class="col-2">
             <!--FOR SPACING-->
@@ -386,16 +365,16 @@
             <!--FOR SPACING-->
         </div>
         <div class="col-4">
-            <input type="button" value="Primary" class="shadow btn" id="primary-btn">
-            <input type="button" value="Secondary" class="shadow btn" id="secondary-btn">
-            <input type="button" value="Border" class="shadow btn" id="border-btn">
-            <input type="button" value="Disabled" class="shadow btn" id="disabled-btn">
+            <?= view('components/buttons/button-primary.php', ['id' => 'primary-btn']); ?>
+            <?= view('components/buttons/button-secondary.php', ['id' => 'secondary-btn']); ?>
+            <?= view('components/buttons/button-border.php', ['id' => 'border-btn']); ?>
+            <?= view('components/buttons/button-disabled.php', ['id' => 'disabled-btn']); ?>
         </div>
         <div class="col-4" style="background-color:grey; padding-bottom: 20px;">
-            <input type="button" value="Primary" class="shadow btn" id="primary-btn-dark">
-            <input type="button" value="Secondary" class="shadow btn" id="secondary-btn-dark">
-            <input type="button" value="Border" class="shadow btn" id="border-btn-dark">
-            <input type="button" value="Disabled" class="shadow btn" id="disabled-btn-dark">
+            <?= view('components/buttons/button-primary.php', ['id' => 'primary-btn-dark']); ?>
+            <?= view('components/buttons/button-secondary.php', ['id' => 'secondary-btn-dark']); ?>
+            <?= view('components/buttons/button-border.php', ['id' => 'border-btn-dark']); ?>
+            <?= view('components/buttons/button-disabled.php', ['id' => 'disabled-btn-dark']); ?>
         </div>
     </div>
     <div class="mt-4 mb-2 row">
@@ -425,34 +404,40 @@
             <h3>Card Examples</h3>
         </div>
     </div>
-    <div class="mb-5 row" id="center-banner-info">
-        <div class="col-3">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Mocha</h5>
-                    <p class="card-text">Espresso mixed with chocolate for a sweet drink with a caffeine kick.</p>
-                </div>
-            </div>
+    <div class="mb-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
         </div>
-        <div class="col-3">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Spanish Latte</h5>
-                    <p class="card-text">Bold espresso with condensed milk sweetness for a balance of strong and sweet.</p>
-                </div>
-            </div>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Mocha',
+            'menuDescription' => 'Espresso mixed with chocolate for a sweet drink with a caffeine kick.'
+        ]); ?>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Frappuccino',
+            'menuDescription' => 'Cold coffee topped with whipped cream and the flavor of your choice, when you want a icy sweet treat.'
+        ]); ?>
+    </div>
+    <div class="mb-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
         </div>
-        <div class="col-3">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Frappuccino</h5>
-                    <p class="card-text">Cold coffee topped with whipped cream and the flavor of your choice, when you want a icy sweet treat.</p>
-                </div>
-            </div>
+        <?= view('components/cards/review-card.php', [
+            'review' => '"Great coffee and atmosphere!"',
+            'author' => '- Chris B.'
+        ]); ?>
+        <?= view('components/cards/review-card.php', [
+            'review' => '"Good menu selection"',
+            'author' => '- Jane D.'
+        ]); ?>
+    </div>
+    <div class="mb-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
         </div>
+        <?= view('components/cards/promo-card.php', [
+            'promoTitle' => 'Trio Pack',
+            'promoDescription' => 'Save more with this deal! Choose 3 drinks from the all time favorite picks!'
+        ]); ?>
     </div>
     <div class="mt-4 mb-2 row">
         <div class="col-2">
@@ -481,28 +466,7 @@
             </div>
         </div>
     </div>
-    <footer class="shadow py-3" style="background-color: #341c61a7;">
-        <div class="container-fluid">
-            <div class="align-items-center text-center row">
-
-                <!--Site Name-->
-                <div class="col-3 fw-bold fs-5">
-                    <p id="basic-info"> 2025 &copy; Midnighter Cafe — CI4 Project</p>
-                </div>
-                <!--Navigation-->
-                <div class="col-6">
-                    <nav class="d-flex flex-column justify-content-center gap-2">
-                        <a href="/moodboard" id="footer" class="fw-bold fs-5">Mood Board</a>
-                        <a href="/roadmap" id="footer" class="fw-bold fs-5">Road Map</a>
-                    </nav>
-                </div>
-                <div class="col-3 fw-bold fs-5">
-                    <p id="basic-info">Contact: 123-456-7890</p>
-                    <p id="basic-info">Email: MidnighterCafebiz@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?= view('components/footer'); ?>
 </body>
 
 </html>

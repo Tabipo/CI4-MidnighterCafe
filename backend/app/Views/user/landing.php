@@ -56,7 +56,7 @@
         font-style: italic;
     }
 
-    #favorite-card {
+    #info-card {
         background-color: #ffffffff;
         color: #151e65;
     }
@@ -80,28 +80,7 @@
 </style>
 
 <body>
-    <header class="shadow py-3" style="background-color: #341c61a7;">
-        <div class="container-fluid">
-            <div class="align-items-center text-center row">
-                <!--Site name-->
-                <div class="col-3 fw-bold fs-5">
-                    <a href="/" id="navbar-link"><img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"> Midnighter Cafe</a>
-                </div>
-                <!--Navigation-->
-                <div class="col-6">
-                    <nav class="d-flex justify-content-center gap-4">
-                        <a href="#About" id="navbar-link" class="fw-semibold">About</a>
-                        <a href="#Menu" id="navbar-link" class="fw-semibold">Menu</a>
-                        <a href="#Stores" id="navbar-link" class="fw-semibold">Stores</a>
-                    </nav>
-                </div>
-                <!--Profile-->
-                <div class="col-3 fw-semibold">
-                    <a href="#Profile" id="navbar-link">User<img src="/assets/Coffee-Clipart.png" alt="Profile" width="30" height="30"></a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?= view('components/header'); ?>
     <div class="container-fluid">
         <div class="row">
             <div class="content-banner col-md-12">
@@ -109,6 +88,45 @@
                 <p style="font-size: 40px;">Here to serve you a cup even after hours<br></p>
             </div>
         </div>
+    </div>
+    <div class="my-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
+        </div>
+        <div class="col-8">
+            <h1 style="color:#151e65; font-family: Cambria; font-weight:bold; text-align: center"> Reviews</h1>
+        </div>
+    </div>
+    <div class="mx-5 my-5 row">
+        <?= view('components/cards/review-card.php', [
+            'review' => '"Great coffee and atmosphere!"',
+            'author' => '- Chris B.'
+        ]); ?>
+        <?= view('components/cards/review-card.php', [
+            'review' => '"Good menu selection"',
+            'author' => '- Jane D.'
+        ]); ?>
+        <?= view('components/cards/review-card.php', [
+            'review' => '"Workers are so nice here!"',
+            'author' => '- John S.'
+        ]); ?>
+    </div>
+    <div class="my-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
+        </div>
+        <div class="col-8">
+            <h1 style="color:#151e65; font-family: Cambria; font-weight:bold; text-align: center"> Special Promo!</h1>
+        </div>
+    </div>
+    <div class="my-5 row">
+        <div class="col-2">
+            <!--FOR SPACING-->
+        </div>
+        <?= view('components/cards/promo-card.php', [
+            'promoTitle' => 'Trio Pack',
+            'promoDescription' => 'Save more with this deal! Choose 3 drinks from the all time favorite picks!'
+        ]); ?>
     </div>
     <div class="my-5 row">
         <div class="col-2">
@@ -123,88 +141,37 @@
         <div class="col-2">
             <!--FOR SPACING-->
         </div>
-        <div class="col-2">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Flat White</h5>
-                    <p class="card-text">Rich espresso with microfoam for a smooth and balanced taste.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Spanish Latte</h5>
-                    <p class="card-text">Bold espresso with condensed milk sweetness for a balance of strong and sweet.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Americano</h5>
-                    <p class="card-text">Espresso softened with hot water for a bold and classic taste.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Matcha Latte</h5>
-                    <p class="card-text">Latte with Japan's earthy green tea powder for a perfect blend of bitter and sweet.</p>
-                </div>
-            </div>
-        </div>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Flat White',
+            'menuDescription' => 'Rich espresso with microfoam for a smooth and balanced taste.'
+        ]); ?>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Spanish Latte',
+            'menuDescription' => 'Bold espresso with condensed milk sweetness for a balance of strong and sweet.'
+        ]); ?>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Americano',
+            'menuDescription' => 'Espresso softened with hot water for a bold and classic taste.'
+        ]); ?>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Matcha Latte',
+            'menuDescription' => 'Latte with Japans earthy green tea powder for a perfect blend of bitter and sweet.'
+        ]); ?>
     </div>
     <div class="my-5 row">
         <div class="col-4">
             <!--FOR SPACING-->
         </div>
-        <div class="col-2">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Mocha</h5>
-                    <p class="card-text">Espresso mixed with chocolate for a sweet drink with a caffeine kick.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <div class="shadow-sm h-100 card" id="favorite-card">
-                <div class="text-center card-body">
-                    <img src="/assets/Coffee-Clipart.png" id="item-pic" style="margin-left:15px; margin-top:1rem; margin-bottom:2rem" width="100" height="100" alt="Popular1">
-                    <h5 style="font-weight: 600;" class="card-title">Frappuccino</h5>
-                    <p class="card-text">Cold coffee topped with whipped cream and the flavor of your choice, when you want a icy sweet treat.</p>
-                </div>
-            </div>
-        </div>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Mocha',
+            'menuDescription' => 'Espresso mixed with chocolate for a sweet drink with a caffeine kick.'
+        ]); ?>
+        <?= view('components/cards/item-card.php', [
+            'menuItem' => 'Frappuccino',
+            'menuDescription' => 'Cold coffee topped with whipped cream and the flavor of your choice, when you want a icy sweet treat.'
+        ]); ?>
     </div>
-    <footer class="shadow py-3" style="background-color: #341c61a7;">
-        <div class="container-fluid">
-            <div class="align-items-center text-center row">
-
-                <!--Site Name-->
-                <div class="col-3 fw-bold fs-5">
-                    <p id="basic-info"> 2025 &copy; Midnighter Cafe — CI4 Project</p>
-                </div>
-                <!--Navigation-->
-                <div class="col-6">
-                    <nav class="d-flex flex-column justify-content-center gap-2">
-                        <a href="/moodboard" id="footer" class="fw-bold fs-5">Mood Board</a>
-                        <a href="/roadmap" id="footer" class="fw-bold fs-5">Road Map</a>
-                    </nav>
-                </div>
-                <div class="col-3 fw-bold fs-5">
-                    <p id="basic-info">Contact: 123-456-7890</p>
-                    <p id="basic-info">Email: MidnightersCafebiz@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?= view('components/footer'); ?>
 </body>
 
 </html>

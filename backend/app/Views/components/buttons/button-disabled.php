@@ -1,0 +1,1 @@
+<input type="button" value="<?= $value ?? 'Disabled' ?>" class="shadow btn" id="<?= $id ?? '' ?>">

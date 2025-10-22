@@ -1,0 +1,1 @@
+<input type="button" value="<?= $value ?? 'Border' ?>" class="shadow btn" id="<?= $id ?? '' ?>">

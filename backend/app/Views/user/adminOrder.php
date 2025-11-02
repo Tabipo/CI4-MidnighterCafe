@@ -178,8 +178,8 @@
             <div class="d-flex flex-column col-auto sidebar">
                 <p style="color: #ffffffff;"><img src="/assets/Midnighter-Cafe-Logo.png" alt="Profile" width="35" height="35" class="mx-2 rounded-2">Midnighter Cafe</p>
                 <a href="/adminDashboard">Dashboard</a><br>
-                <a href="/adminMenu" class="active">Menu</a><br>
-                <a href="/adminOrder">Orders</a><br>
+                <a href="/adminMenu">Menu</a><br>
+                <a href="/adminOrder" class="active">Orders</a><br>
                 <div class="mt-auto pt-3 border-top profile">
                     <div class="d-flex align-items-center">
                         <a href="/adminAccount" id="navbar-link"><img src="/assets/Midnighter-Cafe-Profile.png" style="vertical-align:text-bottom;" alt="Profile" width="35" height="35" class="mx-3 rounded-circle">User</a>

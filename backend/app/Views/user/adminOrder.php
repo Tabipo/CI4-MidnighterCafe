@@ -63,13 +63,15 @@
         font-weight: bold;
     }
 
-    #order-card h5 {
+    #order-card h6 {
         color: #151e65;
         font-family: Cambria;
         font-weight: bolder;
     }
 
-    #order-card h6 {
+    #order-card p {
+        margin: 0px;
+        font-size: 12px;
         font-family: Lucida Sans;
         font-weight: bold;
     }
@@ -153,7 +155,7 @@
         color: #eceed3;
         font-family: "Cambria";
         font-weight: 500;
-        font-size: 1.25rem;
+        font-size: 0.8rem;
     }
 
     #secondary-btn:hover {
@@ -285,29 +287,41 @@
                                     <div class="mb-2 row" id="order-card">
                                         <div class="container">
                                             <div class="shadow p-3 text-left card">
-                                                <h5>1x Spanish Latte</h5>
-                                                <h6> - upsize</h6>
-                                                <h6> - less ice</h6>
-                                                <form action="#">
-                                                    <?= view('components/buttons/button-secondary.php', [
-                                                        'id' => 'secondary-btn',
-                                                        'value' => 'Remove'
-                                                    ]); ?>
-                                                </form>
+                                                <div class="container">
+                                                    <div class="col-10">
+                                                        <h6>1x Spanish Latte</h6>
+                                                        <p> - upsize</p>
+                                                        <p> - less ice</p>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <form action="#">
+                                                            <?= view('components/buttons/button-secondary.php', [
+                                                                'id' => 'secondary-btn',
+                                                                'value' => 'Remove'
+                                                            ]); ?>
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-2 row" id="order-card">
                                         <div class="container">
                                             <div class="shadow p-3 text-left card">
-                                                <h5>1x Matcha Latte</h5>
-                                                <h6> - upsize</h6>
-                                                <form action="#">
-                                                    <?= view('components/buttons/button-secondary.php', [
-                                                        'id' => 'secondary-btn',
-                                                        'value' => 'Remove'
-                                                    ]); ?>
-                                                </form>
+                                                <div class="container">
+                                                    <div class="col-10">
+                                                        <h6>1x Matcha Latte</h6>
+                                                        <p> - upsize</p>
+                                                    </div>
+                                                    <div class="d-flex col-2">
+                                                        <form action="#">
+                                                            <?= view('components/buttons/button-secondary.php', [
+                                                                'id' => 'secondary-btn',
+                                                                'value' => 'Remove'
+                                                            ]); ?>
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

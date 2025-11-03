@@ -13,3 +13,4 @@ $routes->get('/roadmap', 'Users::roadmap');
 $routes->get('/adminDashboard', 'Users::adminDashboard');
 $routes->get('/adminMenu', 'Users::adminMenu');
 $routes->get('/adminOrder', 'Users::adminOrder');
+$routes->get('/adminAccount', 'Users::adminAccount');

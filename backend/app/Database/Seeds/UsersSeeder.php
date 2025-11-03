@@ -17,6 +17,7 @@ class UsersSeeder extends Seeder
                 'lastName' => 'Doe',
                 'email' => 'johndoe@gmail.com',
                 'password' => password_hash('jodo123!', PASSWORD_DEFAULT),
+                'type' => 'manager',
                 'createdAt' => $now,
                 'updatedAt' => $now,
             ],
@@ -26,6 +27,7 @@ class UsersSeeder extends Seeder
                 'lastName' => 'Smith',
                 'email' => 'janesmith@gmail.com',
                 'password' => password_hash('jasm123!', PASSWORD_DEFAULT),
+                'type' => 'manager',
                 'createdAt' => $now,
                 'updatedAt' => $now,
             ]

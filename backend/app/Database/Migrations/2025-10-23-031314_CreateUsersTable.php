@@ -41,6 +41,11 @@ class CreateUsersTable extends Migration
                 'constraint'     => 255,
                 'null'           => false,
             ],
+            'type' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => 20,
+                'null'           => false,
+            ],
             'deletedAt' => [
                 'type' => 'DATETIME',
                 'null' => true,

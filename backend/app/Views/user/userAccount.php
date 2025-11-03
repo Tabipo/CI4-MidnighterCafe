@@ -175,7 +175,7 @@
                                 <div class="row" id="stats-card">
                                     <div class="col-10">
                                         <img src="/assets/Midnighter-Cafe-Profile.png" style="vertical-align:text-bottom; float:left;" alt="Profile" width="150" height="150" class="mx-3 rounded-circle">
-                                        <h3 style="margin-bottom: 0px;">John S. Doe</h3>
+                                        <h3 style="margin-bottom: 0px;">Jane B. Smith</h3>
                                     </div>
                                     <div class="col-1">
                                         <?= view('components/buttons/button-border.php', [

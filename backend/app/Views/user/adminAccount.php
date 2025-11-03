@@ -243,8 +243,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <?= view('components/footer'); ?>
+    <?= view('components/footer'); ?>
 </body>
 
 </html>

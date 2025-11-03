@@ -4,49 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Users extends BaseController
+class Auth extends BaseController
 {
-    public function index(): string
-    {
-        return view('user/landing');
-        //can ADD HERE more functions for different views or routes/endpoints
-    }
-    public function loginPage(): string
-    {
-        return view('user/loginPage');
-    }
-    public function signupPage(): string
-    {
-        return view('user/signupPage');
-    }
-    public function moodboard(): string
-    {
-        return view('user/moodboard');
-    }
-    public function roadmap(): string
-    {
-        return view('user/roadmap');
-    }
-    public function adminDashboard(): string
-    {
-        return view('user/adminDashboard');
-    }
-    public function adminMenu(): string
-    {
-        return view('user/adminMenu');
-    }
-    public function adminOrder(): string
-    {
-        return view('user/adminOrder');
-    }
-    public function adminAccount(): string
-    {
-        return view('user/adminAccount');
-    }
-    public function userAccount(): string
-    {
-        return view('user/userAccount');
-    }
     public function login()
     {
         $session = session();

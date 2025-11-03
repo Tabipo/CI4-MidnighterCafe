@@ -35,4 +35,8 @@ class Users extends BaseController
     {
         return view('user/adminMenu');
     }
+    public function adminOrder(): string
+    {
+        return view('user/adminOrder');
+    }
 }

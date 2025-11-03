@@ -15,3 +15,7 @@ $routes->get('/adminMenu', 'Users::adminMenu');
 $routes->get('/adminOrder', 'Users::adminOrder');
 $routes->get('/adminAccount', 'Users::adminAccount');
 $routes->get('/userAccount', 'Users::userAccount');
+
+$routes->post('login', 'Auth::login');
+$routes->post('logout', 'Auth::logout');
+$routes->post('signup', 'Auth::signup');

@@ -39,4 +39,8 @@ class Users extends BaseController
     {
         return view('user/adminOrder');
     }
+    public function adminAccount(): string
+    {
+        return view('user/adminAccount');
+    }
 }

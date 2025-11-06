@@ -100,8 +100,8 @@
 <body>
     <?php
     $session = session();
-    $errors = $errors ?? [];
-    $old = $old ?? [];
+    $errors = $session->getFlashdata('errors') ?? [];
+    $old = $session->getFlashdata('old') ?? [];
     ?>
     <header class="shadow py-3" id="header">
         <div class="container-fluid">
@@ -117,7 +117,7 @@
         <div class="col-4" id="form-card">
             <h1>Login or Sign Up</h1>
             <p>Join fellow midnighters in a cup of coffee!</p>
-            <form action="/login" method="post">
+            <form action="/login" method="post" novalidate>
                 <p>Email:</p>
                 <input class="form-control"
                     id="email"
@@ -128,10 +128,13 @@
                     value="<?= esc($old['email'] ?? '') ?>"
                     aria-invalid="<?= isset($errors['email']) ? 'true' : 'false' ?>" aria-describedby="email-error">
                 <?php if (! empty($errors['email'])): ?>
-                    <p id="email-error" class="mt-2 text-red-600 text-sm"><?= esc($errors['email']) ?></p>
+                    <p style="color:#a81d1dff"><?= esc($errors['email']) ?></p>
                 <?php endif; ?>
                 <p>Password:</p>
                 <input type="password" name="password" class="form-control" />
+                <?php if (! empty($errors['password'])): ?>
+                    <p style="color:#a81d1dff"><?= esc($errors['password']) ?></p>
+                <?php endif; ?>
                 <input type="submit" value="Login" class="btn" />
             </form>
             <a href="/signup">No account? Signup!<a>

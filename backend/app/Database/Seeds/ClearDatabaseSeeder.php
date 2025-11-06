@@ -14,7 +14,7 @@ class ClearDatabaseSeeder extends Seeder
         // Use disableForeignKeyChecks if supported by the DB to avoid FK issues
         $db->disableForeignKeyChecks();
         foreach ($tablesInOrder as $table)
-            $db->$table($table)->truncate();
+            $db->table($table)->truncate();
         $db->enableForeignKeyChecks();
     }
 }

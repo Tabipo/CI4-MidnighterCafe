@@ -48,6 +48,7 @@
     #form-card {
         padding-top: 20vh;
         padding-left: 10vw;
+        padding-bottom: 10vh;
     }
 
     #form-card h1 {
@@ -98,6 +99,11 @@
 </style>
 
 <body>
+    <?php
+    $session = session();
+    $error = $session->getFlashdata('errors') ?? [];
+    $old = $session->getFlashdata('old') ?? [];
+    ?>
     <header class="shadow py-3" id="header">
         <div class="container-fluid">
             <div class="align-items-center text-center row">
@@ -112,13 +118,41 @@
         <div class="col-4" id="form-card">
             <h1>Sign Up</h1>
             <p>Join fellow midnighters in a cup of coffee!</p>
-            <form action="/">
-                <p>Username:</p>
-                <input type="text" name="username" class="form-control" />
-                <p>Birthday:</p>
-                <input type="text" name="bday" placeholder="yyyy-mm-dd" class="form-control" />
+            <form action="/signup" method="post">
+                <p>First Name:</p>
+                <input class="form-control"
+                    id="firstName"
+                    type="firstName"
+                    name="firstName"
+                    autocomplete="firstName"
+                    required
+                    value="<?= esc($old['firstName'] ?? '') ?>"
+                    aria-invalid="<?= isset($errors['firstName']) ? 'true' : 'false' ?>" aria-describedby="firstName-error" />
+                <p>Middle Name(optional):</p>
+                <input class="form-control"
+                    id="middleName"
+                    type="text"
+                    name="middleName"
+                    autocomplete="middleName" />
+                <p>Last Name:</p>
+                <input class="form-control"
+                    type="text"
+                    name="lastName"
+                    autocomplete="lastName"
+                    required />
+                <p>Email:</p>
+                <input class="form-control"
+                    id="email"
+                    type="text"
+                    name="email"
+                    autocomplete="email"
+                    required />
                 <p>Password:</p>
-                <input type="password" name="password" class="form-control" />
+                <input class="form-control"
+                    type="password"
+                    name="password"
+                    autocomplete="password"
+                    required />
                 <input type="submit" value="Sign Up" class="btn" />
                 <input type="button" value="Cancel" onclick="location.href ='/login'" class="btn" />
             </form>

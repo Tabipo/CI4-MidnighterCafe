@@ -62,14 +62,14 @@ class Auth extends BaseController
 
         $params = session_get_cookie_params();
         setcookie(session_name(), '', time() - 3600, $params['path'] ?? '/', $params['domain'] ?? '', isset($_SERVER['HTTPS']), true);
-        return redirect()->to('/');
+        return redirect()->to('/login');
     }
     public function signup()
     {
         $session = session();
 
+        $validation = \Config\Services::validation();
         $request = service('request');
-        $validation = \Config\Services::valdiation();
 
         $validation->setRule('firstName', 'First Name', 'required|min_length[1]|max_length[100]');
         $validation->setRule('middleName', 'Middle Name', 'permit_empty|max_length[100]');

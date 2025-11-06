@@ -172,7 +172,7 @@
                 <a href="/adminOrder">Orders</a><br>
                 <div class="mt-auto pt-3 border-top profile">
                     <div class="d-flex align-items-center">
-                        <a href="/adminAccount" id="navbar-link" class="active"><img src="/assets/Midnighter-Cafe-Profile.png" style="vertical-align:text-bottom;" alt="Profile" width="35" height="35" class="mx-3 rounded-circle">User</a>
+                        <a href="/adminAccount" id="navbar-link" class="active"><img src="/assets/Midnighter-Cafe-Profile.png" style="vertical-align:text-bottom;" alt="Profile" width="35" height="35" class="mx-3 rounded-circle">Account</a>
                     </div>
                 </div>
             </div>
@@ -197,7 +197,9 @@
                                         ]); ?>
                                     </div>
                                     <div class="col-1">
-                                        <input type="button" value="Logout" onclick="location.href ='/login'" class="btn" id="secondary-btn" />
+                                        <form action="/logout" method="post">
+                                            <input type="submit" value="Logout" class="btn" id="secondary-btn" />
+                                        </form>
                                     </div>
                                     <div class="row g-4" id="stats-card" style="margin-top: 0px;">
                                         <div class="mt-5px pt-3 pl-5px border-top">

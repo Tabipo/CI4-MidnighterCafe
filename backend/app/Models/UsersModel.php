@@ -18,6 +18,7 @@ class UsersModel extends Model
         'lastName',
         'email',
         'password',
+        'type',
     ];
 
     protected bool $allowEmptyInserts = false;

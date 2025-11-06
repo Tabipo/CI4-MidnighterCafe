@@ -15,7 +15,7 @@
             </div>
             <!--Profile(TEMPORARY LOGOUT)-->
             <div class="col-3 fw-semibold">
-                <a href="/login" id="navbar-link">Logout<img src="/assets/Midnighter-Cafe-Profile.png" alt="Profile" width="35" height="35" class="mx-3 rounded-circle"></a>
+                <a href="/userAccount" id="navbar-link">Account<img src="/assets/Midnighter-Cafe-Profile.png" alt="Profile" width="35" height="35" class="mx-3 rounded-circle"></a>
             </div>
         </div>
     </div>

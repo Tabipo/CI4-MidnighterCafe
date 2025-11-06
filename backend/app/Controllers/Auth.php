@@ -33,7 +33,7 @@ class Auth extends BaseController
         }
 
         $userArr = is_array($user) ? $user : (method_exists($user, 'toArray') ? $user->toArray() : (array) $user);
-        if (! password_verify($request->getPost('password'), $userArr['password_hash'] ?? '')) {
+        if (! password_verify($request->getPost('password'), $userArr['password'] ?? '')) {
             $session->setFlashdata('errors', ['password' => 'Incorrect password']);
             $session->setFlashdata('old', ['email' => $email]);
             return redirect()->back()->withInput();
